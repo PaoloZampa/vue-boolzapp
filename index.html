@@ -107,9 +107,9 @@
 
                         <!-- icons -->
                         <div class="my_contact_icons d-flex align-items-center">
-                            <i class="fa-solid fa-circle-notch mx-2"></i>
-                            <i class="fa-solid fa-message mx-2"></i>
-                            <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
+                            <i class="fa-solid fa-magnifying-glass mx-2"></i>
+                            <i class="fa-sharp fa-solid fa-paperclip mx-2"></i>
+                            <i class="fa-solid fa-ellipsis-vertical me-3 ms-2"></i>
                         </div>
                     </div>
 
@@ -117,14 +117,15 @@
                     <!-- main chat -->
                     <div class="main_chat">
                         <div class="row justify-content-around">
-                            <div class="col-4">
-                                <div class="message_text d-flex justify-content-between">
-                                    <span>Test messaggio</span>
+                            <div class="col-5">
+                                <div class="message_text d-flex justify-content-between"
+                                v-for="message in contacts[activeContact].messages">
+                                    <span>{{message.message}}</span>
                                     <span>12:03</span>
                                 </div>
 
                             </div>
-                            <div class="col-4 text-center">
+                            <div class="col-5 text-center">
                                 <div class="my_message_text d-flex justify-content-between">
                                     <span>Test mio messaggio</span>
                                     <span>12:03</span>
