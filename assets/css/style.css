@@ -31,6 +31,14 @@
     margin: 2.5vh auto;
 }
 
+html{
+    background-color:var(--header);
+}
+
+#app{
+    background-color: var(--darker);
+}
+
 /* #endregion utilities */
 
 /* #region debug */
@@ -124,11 +132,13 @@ input::placeholder {
 
 .contacts_wrapper:hover {
     background-color: var(--secondary-hover);
+    cursor: pointer;
 }
 
 .contacts {
-    height: calc(100% - 180px);
+    height: calc(100% - 175px);
     overflow-y: auto;
+    background-color: var(--primary);
 }
 
 /* #endregion contacts */
