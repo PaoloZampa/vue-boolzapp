@@ -119,16 +119,15 @@
                         <div class="row justify-content-around">
                             <div class="col-5">
                                 <div class="message_text d-flex justify-content-between"
-                                v-for="message in contacts[activeContact].messages">
-                                    <span>{{message.message}}</span>
-                                    <span>12:03</span>
+                                    v-for="message in contacts[activeContact].messages">
+                                    <span v-if="message.status === 'received'">{{message.message}} {{message.date}}</span>
                                 </div>
 
                             </div>
                             <div class="col-5 text-center">
-                                <div class="my_message_text d-flex justify-content-between">
-                                    <span>Test mio messaggio</span>
-                                    <span>12:03</span>
+                                <div class="my_message_text d-flex justify-content-between"
+                                    v-for="message in contacts[activeContact].messages">
+                                    <span v-if="message.status === 'sent'">{{message.message}} {{message.date}}</span>
                                 </div>
                             </div>
                         </div>
