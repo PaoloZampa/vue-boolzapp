@@ -40,8 +40,20 @@
     background-color: #009688;
 }
 
-.debug .my_column{
+.debug .my_column {
     background-color: #d5f9ba;
+}
+
+.debug .chat_top{
+    background-color: beige;
+}
+
+.debug .chat_bottom{
+    background-color: aqua;
+}
+
+.debug .main_chat{
+    background-color: brown;
 }
 
 /* #endregion debug */
@@ -49,7 +61,7 @@
 /* #region contacts */
 
 /* top */
-.contacts_top{
+.contacts_top {
     height: 10vh;
 }
 
@@ -63,7 +75,7 @@
 }
 
 /* notifiche */
-.block_notifing{
+.block_notifing {
     height: 10vh;
 }
 
@@ -80,7 +92,7 @@
 }
 
 /* searchbar */
-.my_searchbar{
+.my_searchbar {
     height: 5vh;
 }
 
@@ -94,14 +106,33 @@ input::placeholder {
 }
 
 /* contact list */
-.contact_image img{
+.contact_image img {
     width: 60px;
     border-radius: 50%;
 }
 
-.contacts{
+.contacts {
     height: 70vh;
     overflow-y: auto;
 }
 
 /* #endregion contacts */
+
+/* #region chat */
+
+/* chat top */
+.chat_top{
+    height: 10vh;
+}
+
+/* main chat */
+.main_chat{
+    height: 75vh;
+}
+
+/* chat bottom */
+.chat_bottom{
+    height: 10vh;
+}
+
+/* #endregion chat */
