@@ -67,12 +67,28 @@
                         </div>
                     </form>
 
-                    <!-- ul contacts -->
-                    <ul>
-                        <li>
+                    <!-- list contacts -->
+                    <div class="contacts">
+                        <div class="contacts_wrapper d-flex" v-for="(contact, index) in contacts">
 
-                        </li>
-                    </ul>
+                            <!-- contact image -->
+                            <div class="contact_image">
+                                <img class="img-fluid" :src="contact.avatar" alt="">
+                            </div>
+
+                            <!-- contact information -->
+                            <div class="contact_information">
+                                <strong>{{contact.name}}</strong>
+                                <p>ultimo messaggio inviato</p>
+                            </div>
+
+                            <!-- contact time -->
+                            <div class="contact_time">
+                                12.00
+                            </div>
+
+                        </div>
+                    </div>
 
                 </div>
 

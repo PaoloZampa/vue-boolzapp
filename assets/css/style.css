@@ -75,5 +75,10 @@ input::placeholder {
     font-size: 0.7rem;
 }
 
+/* contact list */
+.contact_image img{
+    width: 60px;
+    border-radius: 50%;
+}
 
 /* #endregion contacts */
