@@ -1,0 +1,33 @@
+/* #region common rules */
+/* #endregion common rules */
+
+
+
+/* #region utilities */
+
+:root {
+    --background: #dadbd2;
+    --primary: #ffffff;
+    --secondary-hover: #e9ebeb;
+    --light-icons: #dadbd2;
+    --dark-icons: #B1B2B5;
+    --sentmessage: #d5f9ba;
+    --dark: #b1b1b1;
+    --darker: #717d89;
+    --notification: #8edafc;
+    --header: #009688;
+}
+
+.my_container{
+    height: 95vh;
+    margin: 2.5vh auto;
+}
+
+/* #endregion utilities */
+
+/* #region debug */
+.debug .my_container{
+    background-color: #8edafc;
+}
+/* #endregion debug */
+
