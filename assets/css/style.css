@@ -65,7 +65,8 @@
     height: 10vh;
 }
 
-.contacts_top img {
+.contacts_top img,
+.chat_top img {
     width: 50px;
     border-radius: 50%;
 }
@@ -128,6 +129,18 @@ input::placeholder {
 /* main chat */
 .main_chat{
     height: 75vh;
+}
+
+.message_text{
+    background-color: var(--primary);
+    border-radius: 4px;
+    padding: 0.2rem 1rem;
+}
+
+.my_message_text{
+    background-color: var(--sentmessage);
+    border-radius: 4px;
+    padding: 0.2rem 1rem;
 }
 
 /* chat bottom */

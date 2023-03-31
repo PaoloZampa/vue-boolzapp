@@ -69,7 +69,8 @@
 
                     <!-- list contacts -->
                     <div class="contacts d-flex flex-column">
-                        <div class="contacts_wrapper d-flex" v-for="(contact, index) in contacts">
+                        <div class="contacts_wrapper d-flex" @click="selectContact(index)"
+                            v-for="(contact, index) in contacts">
 
                             <!-- contact image -->
                             <div class="contact_image">
@@ -96,10 +97,41 @@
                 <div class="col-8 my_column p-0">
 
                     <!-- chat top -->
-                    <div class="chat_top d-flex"></div>
+                    <div class="chat_top d-flex justify-content-between">
+
+                        <!-- my contact information -->
+                        <div class="my_contact_information d-flex align-items-center">
+                            <img class="img-fluid m-2" :src="contacts[activeContact].avatar" alt="">
+                            <strong>{{contacts[activeContact].name}}</strong>
+                        </div>
+
+                        <!-- icons -->
+                        <div class="my_contact_icons d-flex align-items-center">
+                            <i class="fa-solid fa-circle-notch mx-2"></i>
+                            <i class="fa-solid fa-message mx-2"></i>
+                            <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
+                        </div>
+                    </div>
+
 
                     <!-- main chat -->
-                    <div class="main_chat"></div>
+                    <div class="main_chat">
+                        <div class="row justify-content-around">
+                            <div class="col-4">
+                                <div class="message_text d-flex justify-content-between">
+                                    <span>Test messaggio</span>
+                                    <span>12:03</span>
+                                </div>
+
+                            </div>
+                            <div class="col-4 text-center">
+                                <div class="my_message_text d-flex justify-content-between">
+                                    <span>Test mio messaggio</span>
+                                    <span>12:03</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- chat bottom -->
                     <div class="chat_bottom"></div>
