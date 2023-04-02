@@ -104,7 +104,9 @@ html{
     font-size: 0.7rem;
 }
 
-.block_notifing a {
+.block_notifing a, 
+.message_time span,
+.contact_time span {
     color: var(--dark);
     font-size: 0.6rem;
 }
@@ -115,7 +117,8 @@ html{
     height: 30px;
 }
 
-.my_searchbar i {
+.my_searchbar i, 
+.message_time i{
     color: var(--dark-icons);
 }
 

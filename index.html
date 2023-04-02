@@ -28,7 +28,7 @@
             <!-- row -->
             <div class="row">
 
-                <!-- col4 -->
+                <!-- col4 lest contacts -->
                 <div class="col-4 my_column p-0">
 
                     <!-- contacts top -->
@@ -72,7 +72,7 @@
 
                     <!-- list contacts -->
                     <div class="contacts d-flex flex-column">
-                        <div class="contacts_wrapper d-flex" @click="selectContact(index)"
+                        <div class="contacts_wrapper d-flex justify-content-around" @click="selectContact(index)"
                             v-for="(contact, index) in contacts">
 
                             <!-- contact image -->
@@ -88,7 +88,7 @@
 
                             <!-- contact time -->
                             <div class="contact_time">
-                                12.00
+                                <span> 12.00 </span>
                             </div>
 
                         </div>
@@ -96,7 +96,7 @@
 
                 </div>
 
-                <!-- col8 -->
+                <!-- col8 right chat-->
                 <div class="col-8 my_column p-0">
 
                     <!-- chat top -->
@@ -123,6 +123,10 @@
                             v-for="message in contacts[activeContact].messages"
                             :class="message.status === 'sent' ? 'sent' : 'received'">
                             <span>{{message.message}}</span>
+                            <div class="message_time d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <span>19.02</span>
+                            </div>
                         </div>
 
 
