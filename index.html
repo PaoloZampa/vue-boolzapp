@@ -88,7 +88,7 @@
 
                             <!-- contact time -->
                             <div class="contact_time text-end pe-3">
-                                <span> 12.00 </span>
+                                <span>{{contact.messages[contact.messages.length-1].date.slice(11, 16)}}</span>
                             </div>
 
                         </div>
@@ -106,6 +106,9 @@
                         <div class="my_contact_information d-flex align-items-center">
                             <img class="img-fluid m-2" :src="contacts[activeContact].avatar" alt="">
                             <strong>{{contacts[activeContact].name}}</strong>
+                            <span>Ultimo accesso oggi alle:
+                                {{contacts[activeContact].messages[contacts[activeContact].messages.length-1].date.slice(11,
+                                16)}}</span>
                         </div>
 
                         <!-- icons -->
@@ -125,7 +128,7 @@
                             <span>{{message.message}}</span>
                             <div class="message_time d-flex flex-column align-items-center">
                                 <i class="fa-solid fa-chevron-down"></i>
-                                <span>19.02</span>
+                                <span>{{message.date.slice(11, 16)}}</span>
                             </div>
                         </div>
 
