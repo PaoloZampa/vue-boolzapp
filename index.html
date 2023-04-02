@@ -73,7 +73,8 @@
                     <!-- list contacts -->
                     <div class="contacts d-flex flex-column">
                         <div class="contacts_wrapper d-flex" @click="selectContact(index)"
-                            v-for="(contact, index) in contacts">
+                            v-for="(contact, index) in contacts"
+                            :class="index === activeContact ? 'active_contact' : ''">
 
                             <!-- contact image -->
                             <div class="contact_image p-1">
