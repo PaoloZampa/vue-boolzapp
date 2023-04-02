@@ -205,6 +205,10 @@ createApp({
                     status: 'Received'
                 },);
             }, 1000);
+        },
+        dateGenarator() {
+            new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+            
         }
     },
 

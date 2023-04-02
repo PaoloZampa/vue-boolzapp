@@ -106,10 +106,12 @@
                         <!-- my contact information -->
                         <div class="my_contact_information d-flex align-items-center">
                             <img class="img-fluid m-2" :src="contacts[activeContact].avatar" alt="">
-                            <strong>{{contacts[activeContact].name}}</strong>
-                            <span>Ultimo accesso oggi alle:
-                                {{contacts[activeContact].messages[contacts[activeContact].messages.length-1].date.slice(11,
-                                16)}}</span>
+                            <div class="user_chat_info d-flex flex-column">
+                                <strong>{{contacts[activeContact].name}}</strong>
+                                <span>Ultimo accesso oggi alle:
+                                    {{contacts[activeContact].messages[contacts[activeContact].messages.length-1].date.slice(11,
+                                    16)}}</span>
+                            </div>
                         </div>
 
                         <!-- icons -->

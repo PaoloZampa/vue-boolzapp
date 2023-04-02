@@ -103,7 +103,8 @@ html {
     border-radius: 50%;
 }
 
-.block_notifing strong {
+.block_notifing strong,
+.user_chat_info span {
     color: var(--darker);
     font-size: 0.7rem;
 }
