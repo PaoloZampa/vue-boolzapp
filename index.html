@@ -72,22 +72,22 @@
 
                     <!-- list contacts -->
                     <div class="contacts d-flex flex-column">
-                        <div class="contacts_wrapper d-flex justify-content-around" @click="selectContact(index)"
+                        <div class="contacts_wrapper d-flex" @click="selectContact(index)"
                             v-for="(contact, index) in contacts">
 
                             <!-- contact image -->
-                            <div class="contact_image">
+                            <div class="contact_image p-1">
                                 <img class="img-fluid" :src="contact.avatar" alt="">
                             </div>
 
                             <!-- contact information -->
-                            <div class="contact_information">
+                            <div class="contact_information p-1">
                                 <strong>{{contact.name}}</strong>
-                                <p>ultimo messaggio inviato</p>
+                                <p>{{contact.messages[contact.messages.length-1].message}}</p>
                             </div>
 
                             <!-- contact time -->
-                            <div class="contact_time">
+                            <div class="contact_time text-end pe-3">
                                 <span> 12.00 </span>
                             </div>
 

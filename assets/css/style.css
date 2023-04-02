@@ -31,11 +31,11 @@
     margin: 2.5vh auto;
 }
 
-html{
-    background-color:var(--header);
+html {
+    background-color: var(--header);
 }
 
-#app{
+#app {
     background-color: var(--darker);
 }
 
@@ -104,9 +104,10 @@ html{
     font-size: 0.7rem;
 }
 
-.block_notifing a, 
+.block_notifing a,
 .message_time span,
-.contact_time span {
+.contact_time span,
+.contact_information p {
     color: var(--dark);
     font-size: 0.6rem;
 }
@@ -117,8 +118,8 @@ html{
     height: 30px;
 }
 
-.my_searchbar i, 
-.message_time i{
+.my_searchbar i,
+.message_time i {
     color: var(--dark-icons);
 }
 
@@ -131,6 +132,18 @@ input::placeholder {
 .contact_image img {
     width: 60px;
     border-radius: 50%;
+}
+
+.contact_image {
+    width: 60px;
+}
+
+.contact_information {
+    width: calc(100% - 90px)
+}
+
+.contact_time {
+    width: 30px;
 }
 
 .contacts_wrapper:hover {
@@ -178,14 +191,14 @@ input::placeholder {
     padding: 0.2rem 1rem;
 }
 
-.sent{
+.sent {
     background-color: var(--sentmessage);
     width: 50%;
     margin-top: 0.7rem;
     margin-left: 50%;
 }
 
-.received{
+.received {
     background-color: var(--primary);
     width: 50%;
     justify-content: end;
