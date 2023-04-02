@@ -10,6 +10,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            userMessage: '',
             activeContact: 0,
             contacts: [
                 {
@@ -173,13 +174,37 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
         }
     },
     methods: {
-        selectContact(index){
+        selectContact(index) {
             this.activeContact = index
-            console.log(this.activeContact);
+            //console.log(this.activeContact);
+        },
+        writeMessage() {
+            //console.log(this.writeMessage);
+
+            console.log(this.newMessage);
+            if (this.userMessage <= 0) {
+            } else {
+                this.contacts[this.activeContact].messages.push({
+                    date: '10/01/2020 15:30:55',
+                    message: this.userMessage,
+                    status: 'sent'
+                },);
+            }
+            this.userMessage = '';
+            this.autoReplay();
+        },
+        autoReplay() {
+            setTimeout(() => {
+                this.contacts[this.activeContact].messages.push({
+                    date: '10/01/2020 15:30:55',
+                    message: 'dioBastardone',
+                    status: 'Received'
+                },);
+            }, 1000);
         }
     },
 

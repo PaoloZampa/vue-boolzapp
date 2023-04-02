@@ -159,6 +159,7 @@ input::placeholder {
 /* main chat */
 .main_chat {
     height: calc(100% - 140px);
+    overflow-y: auto;
     background-image: url(../img/mine.jpg);
 }
 
@@ -172,6 +173,20 @@ input::placeholder {
     background-color: var(--sentmessage);
     border-radius: 4px;
     padding: 0.2rem 1rem;
+}
+
+.sent{
+    background-color: var(--sentmessage);
+    width: 50%;
+    margin-top: 0.7rem;
+    margin-left: 50%;
+}
+
+.received{
+    background-color: var(--primary);
+    width: 50%;
+    justify-content: end;
+    margin-top: 0.7rem;
 }
 
 /* chat bottom */

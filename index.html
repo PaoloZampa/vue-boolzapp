@@ -118,8 +118,15 @@
 
 
                     <!-- main chat -->
-                    <div class="main_chat">
-                        <div class="row justify-content-around">
+                    <div class="main_chat d-flex flex-column px-3 py-3">
+                        <div class="message_text d-flex justify-content-between"
+                            v-for="message in contacts[activeContact].messages"
+                            :class="message.status === 'sent' ? 'sent' : 'received'">
+                            <span>{{message.message}}</span>
+                        </div>
+
+
+                        <!-- <div class="row justify-content-around">
                             <div class="col-5">
                                 <div class="message_text d-flex justify-content-between"
                                     v-for="message in contacts[activeContact].messages">
@@ -134,13 +141,14 @@
                                     <span v-if="message.status === 'sent'">{{message.message}} {{message.date}}</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- chat bottom -->
                     <div class="chat_bottom d-flex justify-content-around align-items-center">
                         <i class="fa-regular fa-face-kiss-beam fa-lg px-3"></i>
-                        <input type="text" class="form-control text_dark" placeholder="Scrivi un messaggio">
+                        <input type="text" class="form-control text_dark" v-model="userMessage"
+                            @keyup.enter="writeMessage()" placeholder="Scrivi un messaggio">
                         <i class="fa-solid fa-microphone fa-lg px-3"></i>
                     </div>
 
