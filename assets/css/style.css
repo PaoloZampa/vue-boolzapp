@@ -233,7 +233,7 @@ input::placeholder {
 
 /* #endregion chat */
 
-/*  */
+/* #region color picker */
 .color-picker>fieldset {
     position: absolute;
     bottom: 2.5vh;
@@ -280,7 +280,6 @@ input::placeholder {
     --radio-color: #232323;
 }
 
-
 :root:has(#pink:checked) {
     --background: rgb(207, 76, 177);
     --primary: #781273;
@@ -296,7 +295,6 @@ input::placeholder {
     --top-bar: #77461e;
     --font: #ffffff;
 }
-
 
 :root:has(#blue:checked) {
     --background: #1a618a;
@@ -315,7 +313,6 @@ input::placeholder {
 
 }
 
-
 :root:has(#green:checked) {
     --background: #4aaee8;
     --primary: #218ea4;
@@ -332,7 +329,6 @@ input::placeholder {
     --font: #ffffff;
 }
 
-
 :root:has(#dark:checked) {
     --background: #000000;
     --primary: #000000;
@@ -348,4 +344,5 @@ input::placeholder {
     --top-bar: #000000;
     --font: #919191;
 }
-/*  */
+
+/* #endregion color picker */

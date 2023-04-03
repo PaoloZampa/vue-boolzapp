@@ -67,8 +67,7 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
                             <input class="form-control border-start-0 p-0" type="text"
-                                placeholder="Cerca o inizia una nuova chat!" aria-label="Search"
-                                v-model="searchUser">
+                                placeholder="Cerca o inizia una nuova chat!" aria-label="Search" v-model="searchUser">
                         </div>
                     </form>
 
@@ -94,27 +93,28 @@
                                 <span>{{contact.messages[contact.messages.length-1].date.slice(11, 16)}}</span>
                             </div>
 
+                            <!-- color picker -->
                         </div>
                         <form class="color-picker mt-auto" action="">
                             <fieldset>
                                 <legend class="visually-hidden">Pick a color scheme</legend>
                                 <label for="light" class="visually-hidden">Light</label>
                                 <input type="radio" name="theme" id="light" checked>
-        
+
                                 <label for="pink" class="visually-hidden">Pink theme</label>
                                 <input type="radio" id="pink" name="theme">
-        
+
                                 <label for="blue" class="visually-hidden">Blue theme</label>
                                 <input type="radio" id="blue" name="theme">
-        
+
                                 <label for="green" class="visually-hidden">Green theme</label>
                                 <input type="radio" id="green" name="theme">
-        
+
                                 <label for="dark" class="visually-hidden">Dark theme</label>
                                 <input type="radio" id="dark" name="theme">
                             </fieldset>
                         </form>
-        
+
                     </div>
 
                 </div>
