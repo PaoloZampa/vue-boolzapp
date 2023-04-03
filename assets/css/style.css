@@ -122,7 +122,7 @@ html {
 /* searchbar */
 .my_searchbar {
     background-color: var(--light-search);
-    height: 30px;
+    height: 40px;
 }
 
 .my_searchbar i,
@@ -159,7 +159,7 @@ input::placeholder {
 }
 
 .contacts {
-    height: calc(100% - 175px);
+    height: calc(100% - 185px);
     overflow-y: auto;
     background-color: var(--primary);
 }

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prozzap</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/whatsapp.png">
 
     <!-- mycss -->
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -61,11 +62,11 @@
 
                     <!-- searchbar -->
                     <form class="my_searchbar d-flex" for="search_user">
-                        <div class="input-group mx-1">
+                        <div class="input-group p-1">
                             <div class="input-group-text bg-white border-end-0">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
-                            <input id="search_user" class="form-control border-start-0 p-0" type="text"
+                            <input class="form-control border-start-0 p-0" type="text"
                                 placeholder="Cerca o inizia una nuova chat!" aria-label="Search"
                                 v-model="searchUser">
                         </div>
@@ -74,7 +75,7 @@
                     <!-- list contacts -->
                     <div class="contacts d-flex flex-column">
                         <div class="contacts_wrapper d-flex" @click="selectContact(index)"
-                            v-for="(contact, index) in contacts"
+                            v-for="(contact, index) in contacts" v-show="contact.name.includes(searchUser)"
                             :class="index === activeContact ? 'active_contact' : ''">
 
                             <!-- contact image -->
