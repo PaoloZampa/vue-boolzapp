@@ -103,7 +103,7 @@ html {
 .block_notifing i {
     color: var(--notification);
     background-color: var(--primary);
-    padding: 0.9rem;
+    padding: 0.8rem;
     border-radius: 50%;
 }
 
