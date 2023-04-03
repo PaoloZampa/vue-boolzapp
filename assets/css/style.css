@@ -286,7 +286,7 @@ input::placeholder {
     --primary: #781273;
     --secondary-hover: #885ab2;
     --light-icons: #d012fb;
-    --dark-icons: #ffffff;
+    --dark-icons: #765c20;
     --sentmessage: #0fed90;
     --dark: #ffffff;
     --darker: #fbfbfb;
@@ -303,7 +303,7 @@ input::placeholder {
     --primary: #243b87;
     --secondary-hover: #791cdc;
     --light-icons: #791cdc;
-    --dark-icons: #61b0c3;
+    --dark-icons: #7d7d7d;
     --sentmessage: #3299d0;
     --dark: #ffffff;
     --darker: #ffffff;
@@ -321,7 +321,7 @@ input::placeholder {
     --primary: #218ea4;
     --secondary-hover: #3fc896;
     --light-icons: #20976d;
-    --dark-icons: #2a95af;
+    --dark-icons: #7d7d7d;
     --sentmessage: #3299d0;
     --dark: #ffffff;
     --darker: #1f5a98;
@@ -336,12 +336,12 @@ input::placeholder {
 :root:has(#dark:checked) {
     --background: #000000;
     --primary: #000000;
-    --secondary-hover: #b6b8b8;
+    --secondary-hover: #ffffff5a;
     --light-icons: #000000;
-    --dark-icons: #000000;
+    --dark-icons: #7d7d7d;
     --sentmessage: #352152;
-    --dark: #ffffff;
-    --darker: #ffffff;
+    --dark: #b3b3b3;
+    --darker: #b3b3b3;
     --notification: #504949;
     --header: #00000088;
     --light-search: #000000b0;
