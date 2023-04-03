@@ -211,8 +211,11 @@ createApp({
             new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
         }, */
-        deleteMessage(index) {
-            this.contacts[this.activeContact].messages.splice((this.contacts[this.activeContact].messages[index]), 1)
+        deleteMessage(message) {
+            index = this.contacts[this.activeContact].messages.indexOf(message);
+            if (index > -1) {
+                this.contacts[this.activeContact].messages.splice(index, 1);
+            }
         }
     },
 
