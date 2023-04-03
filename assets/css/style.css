@@ -185,7 +185,8 @@ input::placeholder {
 .main_chat {
     height: calc(100% - 140px);
     overflow-y: auto;
-    background-image: url(../img/mine.jpg);
+    background-color: var(--light-icons);
+    background-image: url(../img/whatsappbg.png);
 }
 
 .message_text {
