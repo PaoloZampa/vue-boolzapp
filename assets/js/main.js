@@ -208,7 +208,10 @@ createApp({
         },
         dateGenarator() {
             new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
-            
+
+        },
+        deleteMessage() {
+            this.contacts[this.activeContact].messages.splice((this.contacts[this.activeContact].messages.length - 1), 1)
         }
     },
 
