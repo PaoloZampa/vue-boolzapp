@@ -85,12 +85,15 @@
                             <!-- contact information -->
                             <div class="contact_information p-1">
                                 <strong>{{contact.name}}</strong>
-                                <p>{{contact.messages[contact.messages.length-1].message}}</p>
+                                <p v-if="contact.messages.length > 0">
+                                    {{contact.messages[contact.messages.length-1].message}}</p>
                             </div>
 
                             <!-- contact time -->
                             <div class="contact_time text-end pe-3">
-                                <span>{{contact.messages[contact.messages.length-1].date.slice(11, 16)}}</span>
+                                <span
+                                    v-if="contact.messages.length > 0">{{contact.messages[contact.messages.length-1].date.slice(11,
+                                    16)}}</span>
                             </div>
 
                             <!-- color picker -->
@@ -130,7 +133,7 @@
                             <img class="img-fluid m-2" :src="contacts[activeContact].avatar" alt="">
                             <div class="user_chat_info d-flex flex-column">
                                 <strong>{{contacts[activeContact].name}}</strong>
-                                <span>Ultimo accesso oggi alle:
+                                <span v-if="contacts[activeContact].messages.length > 0">Ultimo accesso oggi alle:
                                     {{contacts[activeContact].messages[contacts[activeContact].messages.length-1].date.slice(11,
                                     16)}}</span>
                             </div>
@@ -149,7 +152,8 @@
                     <div class="main_chat d-flex flex-column px-3 py-3">
                         <div class="message_text d-flex justify-content-between"
                             v-for="(message, index) in contacts[activeContact].messages"
-                            :class="message.status === 'sent' ? 'sent' : 'received'">
+                            :class="message.status === 'sent' ? 'sent' : 'received'"
+                            v-if="contacts[activeContact].messages.length > 0">
                             <span>{{message.message}}</span>
                             <div class="message_time d-flex flex-column align-items-center justify-content-between">
 
