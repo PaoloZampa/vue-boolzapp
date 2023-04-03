@@ -115,13 +115,13 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Claudia',
+                    name: 'Anahi',
                     avatar: './assets/img/avatar_6.jpg',
                     visible: true,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'Ciao Claudia, hai novità?',
+                            message: 'Ciao Anahi, hai novità?',
                             status: 'sent'
                         },
                         {
@@ -131,7 +131,7 @@ createApp({
                         },
                         {
                             date: '10/01/2020 15:51:00',
-                            message: 'Nessuna nuova, buona nuova',
+                            message: 'Ma come non ancora!?',
                             status: 'sent'
                         }
                     ],
@@ -176,6 +176,56 @@ createApp({
                     ],
                 }
             ],
+            answers: [
+                "Ti amo con tutto il mio cuore!",
+                "Sei la mia anima gemella e non potrei chiedere di meglio!",
+                "Non posso immaginare la mia vita senza di te!",
+                "Sei l'amore della mia vita e ti amerò per sempre!",
+                "Sei la persona più importante nella mia vita!",
+                "Sei il mio sogno diventato realtà!",
+                "Sei il mio angelo custode, la mia luce nella vita!",
+                "Il mio cuore appartiene solo a te!",
+                "Non c'è nessun altro al mondo come te, sei unico!",
+                "Sei la mia stella, la mia fortuna!",
+                "Amarti è la cosa più bella che mi sia mai successa!",
+                "Non smetterò mai di amarti, anche quando i capelli diventeranno bianchi!",
+                "Mi fai sentire vivo, felice e amato!",
+                "Ogni momento con te è un momento prezioso!",
+                "Non vedo l'ora di trascorrere il resto della mia vita con te!",
+                "Mi fai sentire completo e felice!",
+                "Amo ogni cosa di te, anche i tuoi difetti!",
+                "Sono innamorato di te sempre di più ogni giorno!",
+                "Sei la persona che mi fa sentire viva!",
+                "Il mio cuore batte solo per te!",
+                "Non vedo l'ora di svegliarmi ogni mattina accanto a te!",
+                "Il tuo sorriso illumina la mia giornata!",
+                "Amare te è la cosa più naturale al mondo!",
+                "Sei la mia felicità, il mio tesoro!",
+                "Non riesco a immaginare la mia vita senza di te!",
+                "Sei l'unico che capisce il mio cuore!",
+                "Sei il mio porto sicuro, la mia casa!",
+                "Il mio amore per te non ha limiti!",
+                "Il mio cuore ti appartiene completamente!",
+                "Sei la persona più dolce e gentile che abbia mai incontrato!",
+                "Ti amerò per sempre e per sempre!",
+                "Non vedo l'ora di invecchiare accanto a te!",
+                "Il mio amore per te è più forte di qualsiasi cosa!",
+                "Amare te è la cosa più facile al mondo!",
+                "Sei la persona che mi fa sentire completa!",
+                "Ti amo più di ogni altra cosa al mondo!",
+                "Non c'è nessuno al mondo come te, sei unico e speciale!",
+                "Sei la mia metà, il mio compagno di vita!",
+                "Non posso immaginare di essere felice senza di te!",
+                "Sei l'unico che fa battere il mio cuore!",
+                "Il mio amore per te è eterno!",
+                "Sei la mia anima gemella, la mia vita!",
+                "Amo ogni cosa di te, anche le cose che non ti piacciono di te stesso!",
+                "Il mio cuore ti appartiene per sempre!",
+                "Non c'è nessuno al mondo che possa prendere il tuo posto!",
+                "Il mio amore per te è come un fiume in piena, inarrestabile!",
+                "Sei la persona che mi fa sentire viva e felice!",
+                "Ti amerò per sempre"
+            ]
         }
     },
     methods: {
@@ -200,22 +250,22 @@ createApp({
         },
         autoReplay() {
             setTimeout(() => {
+                const indexRandom = this.getRndInteger(0, this.answers.length)
                 this.contacts[this.activeContact].messages.push({
                     date: '10/01/2020 15:30:55',
-                    message: 'Per me è la cipolla!',
+                    message: this.answers[indexRandom],
                     status: 'Received'
                 },);
             }, 1000);
         },
-        /* dateGenarator() {
-            new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
-
-        }, */
         deleteMessage(message) {
             index = this.contacts[this.activeContact].messages.indexOf(message);
             if (index > -1) {
                 this.contacts[this.activeContact].messages.splice(index, 1);
             }
+        },
+        getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
         },
     },
 
