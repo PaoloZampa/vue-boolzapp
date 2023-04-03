@@ -60,13 +60,14 @@
                     </div>
 
                     <!-- searchbar -->
-                    <form class="my_searchbar d-flex" role="search">
+                    <form class="my_searchbar d-flex" for="search_user">
                         <div class="input-group mx-1">
                             <div class="input-group-text bg-white border-end-0">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
-                            <input class="form-control border-start-0 p-0" type="search"
-                                placeholder="Cerca o inizia una nuova chat!" aria-label="Search">
+                            <input id="search_user" class="form-control border-start-0 p-0" type="text"
+                                placeholder="Cerca o inizia una nuova chat!" aria-label="Search"
+                                v-model="searchUser">
                         </div>
                     </form>
 

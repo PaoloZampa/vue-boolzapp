@@ -12,6 +12,7 @@ createApp({
         return {
             userMessage: '',
             activeContact: 0,
+            searchUser: '',
             contacts: [
                 {
                     name: 'Michele',
