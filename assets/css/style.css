@@ -19,6 +19,7 @@
     --header: #009688;
     --light-search: #f3eeea;
     --top-bar: #eaeaea;
+    --font: #000000
 }
 
 .my_container {
@@ -39,6 +40,7 @@ html {
 
 #app {
     background-color: var(--header);
+    color: var(--font);
 }
 
 .active_contact {
@@ -230,3 +232,120 @@ input::placeholder {
 }
 
 /* #endregion chat */
+
+/*  */
+.color-picker>fieldset {
+    position: absolute;
+    bottom: 2.5vh;
+    border: 0;
+    display: flex;
+    gap: 1.5rem;
+    width: fit-content;
+    background: #524e4e3b;
+    padding: 1rem;
+    border-radius: 0 1rem 0 0;
+}
+
+.color-picker input[type="radio"] {
+    appearance: none;
+    width: 0.2rem;
+    height: 0.2rem;
+    outline: 2px solid var(--radio-color, currentColor);
+    outline-offset: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-picker input[type="radio"]:checked {
+    background-color: var(--radio-color);
+}
+
+.color-picker input[type="radio"]#light {
+    --radio-color: gray;
+}
+
+.color-picker input[type="radio"]#pink {
+    --radio-color: rgb(243, 111, 192);
+}
+
+.color-picker input[type="radio"]#blue {
+    --radio-color: rgb(4, 247, 255);
+}
+
+.color-picker input[type="radio"]#green {
+    --radio-color: rgb(2, 252, 2);
+}
+
+.color-picker input[type="radio"]#dark {
+    --radio-color: #232323;
+}
+
+
+:root:has(#pink:checked) {
+    --background: rgb(207, 76, 177);
+    --primary: #781273;
+    --secondary-hover: #885ab2;
+    --light-icons: #d012fb;
+    --dark-icons: #ffffff;
+    --sentmessage: #0fed90;
+    --dark: #ffffff;
+    --darker: #fbfbfb;
+    --notification: #9a49ab;
+    --header: #541772;
+    --light-search: #77461e;
+    --top-bar: #77461e;
+    --font: #ffffff;
+}
+
+
+:root:has(#blue:checked) {
+    --background: #1a618a;
+    --primary: #243b87;
+    --secondary-hover: #791cdc;
+    --light-icons: #791cdc;
+    --dark-icons: #61b0c3;
+    --sentmessage: #3299d0;
+    --dark: #ffffff;
+    --darker: #ffffff;
+    --notification: #8edafc;
+    --header: #14aaeb;
+    --light-search: #268dba;
+    --top-bar: #3d6dad;
+    --font: #ffffff;
+
+}
+
+
+:root:has(#green:checked) {
+    --background: #4aaee8;
+    --primary: #218ea4;
+    --secondary-hover: #3fc896;
+    --light-icons: #20976d;
+    --dark-icons: #2a95af;
+    --sentmessage: #3299d0;
+    --dark: #ffffff;
+    --darker: #1f5a98;
+    --notification: #8edafc;
+    --header: #009688;
+    --light-search: #2b6f8c;
+    --top-bar: #25bd8a;
+    --font: #ffffff;
+}
+
+
+:root:has(#dark:checked) {
+    --background: #000000;
+    --primary: #000000;
+    --secondary-hover: #b6b8b8;
+    --light-icons: #000000;
+    --dark-icons: #000000;
+    --sentmessage: #352152;
+    --dark: #ffffff;
+    --darker: #ffffff;
+    --notification: #504949;
+    --header: #00000088;
+    --light-search: #000000b0;
+    --top-bar: #000000;
+    --font: #919191;
+}
+/*  */
