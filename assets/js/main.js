@@ -216,7 +216,7 @@ createApp({
             if (index > -1) {
                 this.contacts[this.activeContact].messages.splice(index, 1);
             }
-        }
+        },
     },
 
 }).mount('#app')

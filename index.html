@@ -73,9 +73,9 @@
 
                     <!-- list contacts -->
                     <div class="contacts d-flex flex-column">
-                        <div class="contacts_wrapper d-flex" @click="selectContact(index)"
-                            v-for="(contact, index) in contacts" v-show="contact.name.includes(searchUser)"
-                            :class="index === activeContact ? 'active_contact' : ''">
+                        <div class="contacts_wrapper" @click="selectContact(index)" v-for="(contact, index) in contacts"
+                            v-show="contact.name.toLowerCase().includes(searchUser.toLowerCase())"
+                            :class="index === activeContact ? 'active_contact' : '', searchUser == '' || contact.name.toLowerCase().includes(searchUser.toLowerCase()) ? 'd-flex' : ''">
 
                             <!-- contact image -->
                             <div class="contact_image p-1">
