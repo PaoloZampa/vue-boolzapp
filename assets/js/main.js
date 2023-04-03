@@ -201,7 +201,7 @@ createApp({
             setTimeout(() => {
                 this.contacts[this.activeContact].messages.push({
                     date: '10/01/2020 15:30:55',
-                    message: 'dioBastardone',
+                    message: 'Per me è la cipolla!',
                     status: 'Received'
                 },);
             }, 1000);

@@ -24,6 +24,8 @@
 .my_container {
     height: 95vh;
     margin: 2.5vh auto;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
 }
 
 .my_column {
@@ -36,7 +38,7 @@ html {
 }
 
 #app {
-    background-color: var(--darker);
+    background-color: var(--header);
 }
 
 .active_contact {
