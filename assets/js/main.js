@@ -15,8 +15,8 @@ createApp({
             searchUser: '',
             contacts: [
                 {
-                    name: 'Michele',
-                    avatar: './assets/img/avatar_1.jpg',
+                    name: 'Brianna Love 🐎💖',
+                    avatar: './assets/img/brianna-love.png',
                     visible: true,
                     messages: [
                         {
@@ -37,8 +37,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Fabio',
-                    avatar: './assets/img/avatar_2.jpg',
+                    name: 'Lana Rhoades 😏😍🐖',
+                    avatar: './assets/img/lana-rhoades.png',
                     visible: true,
                     messages: [
                         {
@@ -59,8 +59,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Samuele',
-                    avatar: './assets/img/avatar_3.jpg',
+                    name: 'Mia Malkova 😋💕',
+                    avatar: './assets/img/mia-malkova.png',
                     visible: true,
                     messages: [
                         {
@@ -81,8 +81,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro B.',
-                    avatar: './assets/img/avatar_4.jpg',
+                    name: 'Mishka Brooks 🌺👀💧',
+                    avatar: './assets/img/mishka-brooks.png',
                     visible: true,
                     messages: [
                         {
@@ -98,8 +98,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro L.',
-                    avatar: './assets/img/avatar_5.jpg',
+                    name: 'Riley Reid 🥰🌺💜',
+                    avatar: './assets/img/riley-reid.png',
                     visible: true,
                     messages: [
                         {
@@ -115,8 +115,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Anahi',
-                    avatar: './assets/img/avatar_6.jpg',
+                    name: 'Anahi Not 😏😏😏',
+                    avatar: './assets/img/anahi-not.png',
                     visible: true,
                     messages: [
                         {
@@ -137,8 +137,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Federico',
-                    avatar: './assets/img/avatar_7.jpg',
+                    name: 'Sasha Grey 😍💕',
+                    avatar: './assets/img/sasha-grey.png',
                     visible: true,
                     messages: [
                         {
@@ -154,8 +154,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Davide',
-                    avatar: './assets/img/avatar_8.jpg',
+                    name: 'Syndey Cole 🐖😋🍁',
+                    avatar: './assets/img/syndey-cole.png',
                     visible: true,
                     messages: [
                         {
@@ -240,7 +240,7 @@ createApp({
             if (this.userMessage <= 0) {
             } else {
                 this.contacts[this.activeContact].messages.push({
-                    date: new dateTime.now().setLocale('it').toLocaleString({ day: '2-digit',month: '2-digit',year: 'numeric',hour: '2-digit',minute: '2-digit' }),
+                    date: new dateTime.now().setLocale('it').toLocaleString({ day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
                     message: this.userMessage,
                     status: 'sent'
                 },);
@@ -252,7 +252,7 @@ createApp({
             setTimeout(() => {
                 const indexRandom = this.getRndInteger(0, this.answers.length)
                 this.contacts[this.activeContact].messages.push({
-                    date: new dateTime.now().setLocale('it').toLocaleString({ day: '2-digit',month: '2-digit',year: 'numeric',hour: '2-digit',minute: '2-digit' }),
+                    date: new dateTime.now().setLocale('it').toLocaleString({ day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
                     message: this.answers[indexRandom],
                     status: 'Received'
                 },);
@@ -275,4 +275,4 @@ const dateTime = luxon.DateTime;
 
 /* test date time */
 console.log(dateTime.now().setLocale('it').toFormat('LL').toLocaleString(dateTime.DATETIME_SHORT_WITH_SECONDS));
-console.log(dateTime.now().setLocale('it').toLocaleString({ day: '2-digit',month: '2-digit',year: 'numeric',hour: '2-digit',minute: '2-digit' })); //=> 'April 20');
+console.log(dateTime.now().setLocale('it').toLocaleString({ day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })); //=> 'April 20');
